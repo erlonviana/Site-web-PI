@@ -1,16 +1,126 @@
-body{
-     margin: 0;
-     line-height: 30px;
+body {
+    margin: 0;
+    line-height: 30px;
     background-image: url(/images/fundo.png);
     background-position: center;
     background-size: cover;
+  }
 
-}
-
-.cards{
+  #nav-bar{
+   
+   
+    z-index: 1000; 
+   
+  }
+  
+  .menu {
+    display: block;
+    margin-top: 50px;
+    width: 300px;
+    height: 100vh;
+    background-color: #003b2b;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+  }
+  
+  .imagem {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    height: 90vh;
-    
-}
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .imagem > img {
+    width: 150px;
+    max-height: 150px;
+  }
+  
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 2rem;
+    color: white;
+  }
+  
+  .p2 {
+    font-size: 1rem;
+  }
+  
+  #container-buttons {
+    padding: 5px;
+  }
+  
+  #btns {
+    background-color: #08916a;
+    border: none;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  #btns:hover {
+    background-color: #03f685;
+  }
+  
+  i {
+    padding-right: 10px;
+  }
+  
+  .cards {
+    display: flex;
+    margin-top: 50px; 
+    padding: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 300px; 
+    width: calc(100% - 300px);
+  }
+  
+  .card {
+    margin-right: 20px;
+    width: 18rem;
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .menu {
+      width: 100%;
+      height: auto;
+      position: relative; 
+    }
+  
+    .cards {
+      margin-left: 0;
+      width: 100%; 
+      justify-content: center;
+    }
+  
+    .card {
+      width: 100%; 
+      margin-right: 0;
+    }
+  
+    .text {
+      font-size: 1.5rem;
+    }
+  
+    #container-buttons {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .text {
+      font-size: 1.2rem;
+    }
+  
+    .imagem > img {
+      width: 120px; 
+      max-height: 120px;
+    }
+  }
+  
