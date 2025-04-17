@@ -1,0 +1,16 @@
+body{
+     margin: 0;
+     line-height: 30px;
+    background-image: url(/images/fundo.png);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.cards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+    
+}
