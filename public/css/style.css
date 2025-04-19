@@ -157,7 +157,7 @@ i {
   justify-content: center; /* Centraliza horizontalmente */
 }
 
-.circle{
+.circle-hort{
   width: 200px;
   height: 200px;
   background-color: white;
@@ -165,6 +165,7 @@ i {
   background-image: url(/images/hortlogo.png);
   background-position: center;
 }
+
 
 
 .formHortalicas {
@@ -177,5 +178,28 @@ i {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   align-items: center;
   justify-content: center;
+  background-repeat: no-repeat;
 
+}
+
+
+.circle-fert{
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border-radius: 100%;
+  background-image: url(/images/fertlogo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.circle-water{
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border-radius: 100%;
+  background-image: url(/images/waterlogo.png);
+  background-position: center;
+  background-repeat: no-repeat;
 }
