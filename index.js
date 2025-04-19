@@ -1,36 +1,27 @@
-// Importando Express
-
 import express from "express";
+import HortalicasController from "./controllers/HortalicasController.js";
 
-// Carregando o metodo principal do express
 const app = express();
 
-// Configurando a view engine do ejs
+// Configurando a view engine
+app.set("view engine", "ejs");
 
-app.set('view engine', 'ejs');
+// Servindo arquivos estáticos
+app.use(express.static("public"));
 
-// Arquivos Estáticos
+// Rotas
+app.use("/", HortalicasController);
 
-app.use(express.static('public'));
-
-// CRIANDO ROTA PRINCIPAL DO SITE
-
+// Rota principal
 app.get("/", (req, res) => {
   res.render("index");
 });
 
-
-
-
-
-
-
-
-
+// Inicialização do servidor
 app.listen(8080, (error) => {
   if (error) {
-    console.log("Ocorreu um erro ao iniciar o servidor: " + error);
+    console.error("Erro ao iniciar o servidor:", error);
   } else {
-    console.log("O servidor foi iniciado com sucesso!");
+    console.log("Servidor iniciado com sucesso na porta 8080!");
   }
 });

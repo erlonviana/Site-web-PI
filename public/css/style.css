@@ -1,126 +1,181 @@
 body {
-    margin: 0;
-    line-height: 30px;
-    background-image: url(/images/fundo.png);
-    background-position: center;
-    background-size: cover;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  line-height: 30px;
+  background-image: url(/images/fundo.png);
+  background-position: center;
+  background-size: cover;
+}
+
+#nav-bar {
+  z-index: 1000;
+}
+
+.menu {
+  display: block;
+  margin-top: 50px;
+  width: 300px;
+  height: 100vh;
+  background-color: #003b2b;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+}
+
+.imagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.imagem > img {
+  width: 150px;
+  max-height: 150px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 2rem;
+  color: white;
+}
+
+.p2 {
+  font-size: 1rem;
+}
+
+#container-buttons {
+  padding: 5px;
+}
+
+#btns {
+  background-color: #08916a;
+  border: none;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+#btns:hover {
+  background-color: #03f685;
+}
+
+i {
+  padding-right: 10px;
+}
+
+.cards {
+  display: flex;
+  margin-top: 50px;
+  padding: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 300px;
+  width: calc(100% - 300px);
+}
+
+.card {
+  margin-right: 20px;
+  width: 18rem;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    width: 100%;
+    height: auto;
+    position: relative;
   }
 
-  #nav-bar{
-   
-   
-    z-index: 1000; 
-   
-  }
-  
-  .menu {
-    display: block;
-    margin-top: 50px;
-    width: 300px;
-    height: 100vh;
-    background-color: #003b2b;
-    position: fixed; 
-    top: 0;
-    left: 0;
-    padding-top: 20px;
-  }
-  
-  .imagem {
-    display: flex;
-    align-items: center;
+  .cards {
+    margin-left: 0;
+    width: 100%;
     justify-content: center;
+  }
+
+  .card {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .text {
+    font-size: 1.5rem;
+  }
+
+  #container-buttons {
     padding: 10px;
   }
-  
-  .imagem > img {
-    width: 150px;
-    max-height: 150px;
-  }
-  
+}
+
+@media (max-width: 480px) {
   .text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
-    font-size: 2rem;
-    color: white;
+    font-size: 1.2rem;
   }
-  
-  .p2 {
-    font-size: 1rem;
+
+  .imagem > img {
+    width: 120px;
+    max-height: 120px;
   }
+}
+
+.card-img-top {
+  height: 200px;
+}
+
+.card{
+  border: none;
+}
+
+.card:hover{
+  transform:translate(0px, -20px);
+  transition: 1s;
+}
+
+#btn-secundary{
+  display: block;
+  justify-content: center;
+  background-color: #003b2b;
+  font-weight: bold;
+  border: none;
+}
+
+#btn-secundary:hover{
+  background-color: #08916a;
   
-  #container-buttons {
-    padding: 5px;
-  }
-  
-  #btns {
-    background-color: #08916a;
-    border: none;
-    margin-bottom: 20px;
-    width: 100%;
-  }
-  
-  #btns:hover {
-    background-color: #03f685;
-  }
-  
-  i {
-    padding-right: 10px;
-  }
-  
-  .cards {
-    display: flex;
-    margin-top: 50px; 
-    padding: 20px;
-    justify-content: center;
-    align-items: flex-start;
-    margin-left: 300px; 
-    width: calc(100% - 300px);
-  }
-  
-  .card {
-    margin-right: 20px;
-    width: 18rem;
-  }
-  
- 
-  @media (max-width: 768px) {
-    .menu {
-      width: 100%;
-      height: auto;
-      position: relative; 
-    }
-  
-    .cards {
-      margin-left: 0;
-      width: 100%; 
-      justify-content: center;
-    }
-  
-    .card {
-      width: 100%; 
-      margin-right: 0;
-    }
-  
-    .text {
-      font-size: 1.5rem;
-    }
-  
-    #container-buttons {
-      padding: 10px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .text {
-      font-size: 1.2rem;
-    }
-  
-    .imagem > img {
-      width: 120px; 
-      max-height: 120px;
-    }
-  }
-  
+}
+
+.container2{
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;     /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+.circle{
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border-radius: 100%;
+  background-image: url(/images/hortlogo.png);
+  background-position: center;
+}
+
+
+.formHortalicas {
+  display: flex;
+  flex-direction: row;  /* Campos um abaixo do outro */
+  width: 400px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 40px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: center;
+
+}
