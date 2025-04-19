@@ -1,5 +1,12 @@
+// Importando Express
+
 import express from "express";
+
+//Importando Rotas
 import HortalicasController from "./controllers/HortalicasController.js";
+import FertilizerController from "./controllers/FertilizerController.js";
+import WaterLevelController from "./controllers/WaterLevelController.js";
+// Iniciando express na variável app
 
 const app = express();
 
@@ -11,6 +18,8 @@ app.use(express.static("public"));
 
 // Rotas
 app.use("/", HortalicasController);
+app.use("/", FertilizerController);
+app.use("/", WaterLevelController);
 
 // Rota principal
 app.get("/", (req, res) => {
